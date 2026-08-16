@@ -1,0 +1,25 @@
+{
+  "name": "fairview-semiconductor",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FairView Semiconductor public site — Gallium HBM4 chipset and Stallion GPU series.",
+  "scripts": {
+    "dev": "next dev --turbopack --port 3000",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^15.5.10",
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.17.0",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "eslint": "^9.33.0",
+    "eslint-config-next": "^15.5.10",
+    "typescript": "^5.9.2"
+  }
+}

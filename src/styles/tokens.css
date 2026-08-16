@@ -1,0 +1,101 @@
+/**
+ * FairView Semiconductor brand tokens.
+ * Edit here first. Components consume these variables — never hard-code hex
+ * in feature CSS except for one-off diagram fills that already reference tokens.
+ *
+ * See /docs/BRAND.md and /brand for usage.
+ */
+
+:root {
+  color-scheme: dark;
+
+  /* Surfaces */
+  --fv-void: #06080c;
+  --fv-ink: #0a0d12;
+  --fv-slate: #121821;
+  --fv-steel: #1a2230;
+  --fv-panel: color-mix(in oklab, var(--fv-steel) 78%, black);
+  --fv-elev: color-mix(in oklab, var(--fv-steel) 92%, white 8%);
+
+  /* Ink */
+  --fv-paper: #e7eef6;
+  --fv-mist: #a7b4c4;
+  --fv-mute: #6f7c8d;
+  --fv-faint: #4a5563;
+
+  /* Gallium — liquid-metal teal */
+  --fv-gallium: #5ee0d2;
+  --fv-gallium-deep: #0c4f4a;
+  --fv-gallium-mid: #2a9b91;
+  --fv-gallium-glow: rgb(94 224 210 / 0.42);
+
+  /* Stallion — copper ember */
+  --fv-stallion: #e8a04a;
+  --fv-stallion-deep: #7a3d10;
+  --fv-stallion-mid: #c4782a;
+  --fv-stallion-glow: rgb(232 160 74 / 0.42);
+
+  /* Signal */
+  --fv-signal: #8eb4ff;
+  --fv-ok: #6dcca8;
+  --fv-warn: #e0b15a;
+  --fv-danger: #e07070;
+
+  /* Lines */
+  --fv-line: rgb(180 210 230 / 0.12);
+  --fv-line-strong: rgb(180 210 230 / 0.22);
+  --fv-focus: var(--fv-gallium);
+
+  /* Type */
+  --fv-sans: var(--font-sans), "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --fv-serif: var(--font-serif), Fraunces, "Source Serif 4", Georgia, serif;
+  --fv-display: var(--font-display), Fraunces, Georgia, serif;
+  --fv-mono: var(--font-mono), "IBM Plex Mono", ui-monospace, monospace;
+
+  --fv-tracking-kicker: 0.18em;
+  --fv-leading-body: 1.65;
+  --fv-leading-display: 1.05;
+
+  /* Fluid type — scales from phone to 34" and beyond */
+  --step--1: clamp(0.75rem, 0.7rem + 0.22vw, 0.875rem);
+  --step-0: clamp(0.95rem, 0.88rem + 0.32vw, 1.125rem);
+  --step-1: clamp(1.125rem, 0.98rem + 0.7vw, 1.4rem);
+  --step-2: clamp(1.4rem, 1.05rem + 1.4vw, 1.95rem);
+  --step-3: clamp(1.85rem, 1.15rem + 2.6vw, 3.05rem);
+  --step-4: clamp(2.5rem, 1.2rem + 4.8vw, 4.85rem);
+  --step-5: clamp(3.2rem, 1.05rem + 7.4vw, 7.4rem);
+
+  /* Layout */
+  --gutter: clamp(1.1rem, 2.6vw, 3.75rem);
+  --page-max: 76rem;
+  --prose-max: 44rem;
+  --header-h: 4.25rem;
+  --radius-sm: 0.4rem;
+  --radius: 0.85rem;
+  --radius-lg: 1.35rem;
+  --shadow-glow: 0 0 80px var(--fv-gallium-glow);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration: 220ms;
+
+  font-size: var(--step-0);
+}
+
+@media (min-width: 1440px) {
+  :root { --page-max: 86rem; }
+}
+
+@media (min-width: 1800px) {
+  :root { --page-max: 100rem; }
+}
+
+@media (min-width: 2200px) {
+  :root { --page-max: 112rem; }
+}
+
+@media (min-width: 2800px) {
+  :root { --page-max: 128rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --duration: 1ms; }
+}
