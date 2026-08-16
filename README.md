@@ -2,6 +2,11 @@
 
 Public website for **FairView Semiconductor** — Gallium Series HBM4 memory chipset and Stallion Series GPU.
 
+- Production: https://fairview-semiconductor.vercel.app
+- Source: https://github.com/jnsrikanth/fairview-semiconductor
+
+Attach the FairView domain later in the Vercel project. Set `NEXT_PUBLIC_SITE_URL` to the canonical origin.
+
 Product numbers are taken from the approved architecture packet `FV-ARCH-HBM4-001`. This repo does not invent JEDEC timings, selected Vdd, or vendor marketing bins.
 
 ## Stack
