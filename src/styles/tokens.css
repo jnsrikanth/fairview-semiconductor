@@ -9,11 +9,11 @@
 :root {
   color-scheme: dark;
 
-  /* Surfaces */
-  --fv-void: #06080c;
-  --fv-ink: #0a0d12;
-  --fv-slate: #121821;
-  --fv-steel: #1a2230;
+  /* Surfaces — violet-ink, not generic black */
+  --fv-void: #07060c;
+  --fv-ink: #0c0914;
+  --fv-slate: #16111f;
+  --fv-steel: #1e1730;
   --fv-panel: color-mix(in oklab, var(--fv-steel) 78%, black);
   --fv-elev: color-mix(in oklab, var(--fv-steel) 92%, white 8%);
 
@@ -35,16 +35,33 @@
   --fv-stallion-mid: #c4782a;
   --fv-stallion-glow: rgb(232 160 74 / 0.42);
 
+  /* Vital & Virility — royal electric purple of the house */
+  --fv-vital: #c084fc;
+  --fv-vital-bright: #d8b4fe;
+  --fv-vital-mid: #9333ea;
+  --fv-vital-deep: #4c1d95;
+  --fv-vital-abyss: #240b49;
+  --fv-vital-glow: rgb(192 132 252 / 0.48);
+  --fv-vital-laser: rgb(168 85 247 / 0.75);
+
+  /* Cinematic retro-futuristic flux conduits */
+  --fv-flux-violet: #a855f7;
+  --fv-flux-cyan: #38bdf8;
+  --fv-flux-amber: #fbbf24;
+  --fv-flux-mesh: linear-gradient(135deg, rgba(168, 85, 247, 0.22) 0%, rgba(94, 224, 210, 0.18) 50%, rgba(232, 160, 74, 0.16) 100%);
+  --fv-gradient-vital: linear-gradient(135deg, #c084fc 0%, #7e22ce 100%);
+  --fv-gradient-package: linear-gradient(135deg, var(--fv-vital) 0%, var(--fv-gallium) 50%, var(--fv-stallion) 100%);
+
   /* Signal */
-  --fv-signal: #8eb4ff;
+  --fv-signal: #c084fc;
   --fv-ok: #6dcca8;
   --fv-warn: #e0b15a;
   --fv-danger: #e07070;
 
   /* Lines */
-  --fv-line: rgb(180 210 230 / 0.12);
-  --fv-line-strong: rgb(180 210 230 / 0.22);
-  --fv-focus: var(--fv-gallium);
+  --fv-line: rgb(192 132 252 / 0.14);
+  --fv-line-strong: rgb(192 132 252 / 0.28);
+  --fv-focus: var(--fv-vital);
 
   /* Type */
   --fv-sans: var(--font-sans), "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;

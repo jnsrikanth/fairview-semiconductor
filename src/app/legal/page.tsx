@@ -24,8 +24,10 @@ export default function LegalPage() {
           directions for counsel. They are not filed patents.
         </p>
         <p>
-          Export-control: an HBM4 controller plus GPU attach is likely ECCN-sensitive. This site is not a
-          classification opinion.
+          Export control: an HBM4 controller plus a GPU attach is likely ECCN-sensitive. This site is not a
+          classification, a license, or advice on how to ship restricted items. Design-in and any eventual silicon
+          follow the export-control laws that apply to the customer, the node, and the destination. We will not
+          market around those rules.
         </p>
         <h2>Must not claim</h2>
         <ul style={{ paddingLeft: "1.2rem", color: "var(--fv-mist)", display: "grid", gap: "0.45rem" }}>

@@ -8,25 +8,30 @@ This is the written twin of `src/styles/tokens.css`. Change tokens first. Then t
 - **FairView Semiconductor** — legal and first mention.
 - Do not write Fairview, Fair View, or FV Semi in public copy.
 
-## Product names
+## The Genesis Narrative
 
-| Family | SKUs | Color |
-|---|---|---|
-| Gallium Series | FV-GL-H4, FV-GL-S4, FV-GL-HX | `--fv-gallium` |
-| Stallion Series | FV-ST-S100, FV-ST-S80I | `--fv-stallion` |
+Fairchild Semiconductor in 1957 created the silicon planar process that sparked Silicon Valley. FairView Semiconductor is formed at the tipping point of the AI Century to become the genesis for the next compute revolution—unifying HBM4 memory architecture and GPU compute into single packages and 1U/2U/3U high-density blade servers.
 
-SKU strings are monospaced. Never invent a third family without a lock.
+## Product families
+
+| Family | SKUs | Color | Role |
+|---|---|---|---|
+| Gallium Series | FV-GL-H4, FV-GL-S4, FV-GL-HX | `--fv-gallium` | HBM4 memory chipset (8.192+ TB/s) |
+| Stallion Series | FV-ST-S100, FV-ST-S80I | `--fv-stallion` | GPU / accelerator compute die |
+| Blade Server Series | FV-RACK-1U, FV-RACK-2U, FV-RACK-3U | `--fv-vital` | 1U, 2U, 3U Enterprise Rack Systems (2027 Book) |
+
+SKU strings are monospaced. Never invent an undocumented SKU without an engineering lock.
 
 ## Color
 
 Defined in `src/styles/tokens.css`.
 
-- Void / ink / slate are surfaces. Paper / mist / mute are type.
-- Gallium teal is memory. Stallion copper is compute. Signal blue is host I/O.
-- Dual-accent gradient (teal → copper) is reserved for the mark and for “package” moments.
-- Do not use NVIDIA green, AMD red, or a third hero accent.
-
-Contrast: paper on void, mist on slate. Gallium and Stallion text must sit on deep companions (`--fv-gallium-deep`, `--fv-stallion-deep`) when used as fills.
+- **Surfaces**: Void (`#07060c`), ink (`#0c0914`), slate (`#16111f`), and steel (`#1e1730`).
+- **Typography**: Paper (`#e7eef6`), mist (`#a7b4c4`), mute (`#6f7c8d`).
+- **Gallium Teal** (`#5ee0d2`): Represents memory bandwidth and physical interconnect.
+- **Stallion Copper** (`#e8a04a`): Represents GPU compute, tensor execution, and ALU power.
+- **Vital Purple** (`#c084fc`, `#9333ea`, `#4c1d95`): The royal electric purple of the house—representing virility, vitality, and advanced computing flux energy. Used for blade systems, genesis highlights, and hero status indicators.
+- **Multi-accent Package Gradient**: Vital purple → Gallium teal → Stallion copper.
 
 ## Type
 
@@ -37,47 +42,19 @@ Contrast: paper on void, mist on slate. Gallium and Stallion text must sit on de
 | Lede / long-form | Source Serif 4 | `--fv-serif` |
 | Identities / SKUs / tables | IBM Plex Mono | `--fv-mono` |
 
-Fluid steps `--step--1` … `--step-5` scale from phone to 34″ and larger. Do not set fixed `px` type in pages.
+Fluid steps `--step--1` … `--step-5` scale dynamically from mobile devices to ultra-wide displays.
 
-## Layout
+## 21st-Century Multi-Segment Horizons
 
-- `--gutter` and `--page-max` expand at 1440 / 1800 / 2200 / 2800.
-- Prefer CSS Grid for page chassis and product matrices. Flex for nav, actions, and metric interiors.
-- Prose column stays `--prose-max`. Ultrawide adds columns; it does not stretch a paragraph to 80 rem.
-
-## Motion
-
-- Halo breathe and Ken Burns loops are decoration.
-- Honor `prefers-reduced-motion: reduce`: no hero video, no halo animation, no hover translate.
-- Every moving media control must have a pause control.
+1. **AI Acceleration & Hyperscale Data Centers** (Active Tape-out / First Silicon)
+2. **Enterprise Computing & Blade Servers** (1U, 2U, and 3U form factors on 2027 delivery book)
+3. **Automotive & Autonomous Self-Driving** (Level 4/5 low-latency sensor fusion)
+4. **Satellite & Space Communications** (Rad-tolerant orbital edge compute)
+5. **Mobile & Personal Computing** (Compact SPHBM4 workstations)
 
 ## Voice
 
-Compile. Do not hype.
+Compile. Do not hype. Tell the historical truth with uncompromising technical rigor.
 
-Allowed: “compiled,” “public fact,” “partner cubes,” “first tape-out,” “not in pack.”
+Allowed: “compiled,” “public fact,” “partner cubes,” “first tape-out,” “2027 delivery,” “1U/2U/3U blade.”
 Forbidden: invented tRFC / Vdd, vendor marketing bins as FairView numbers, “patented,” “world-class,” “up to 3.3 TB/s.”
-
-## Accessibility
-
-- Skip link, visible focus, 44 px minimum targets, labeled form fields, live regions on submit.
-- Do not convey meaning by color alone (Gallium/Stallion always carry a name).
-- Captions on editorial renders: “not a pinout.”
-
-## User journey
-
-1. **Discover** — home hero states the two families and the honesty rule.
-2. **Choose** — Gallium vs Stallion product cards.
-3. **Specify** — SKU pages + `/specifications`.
-4. **Understand attach** — `/architecture` diagrams.
-5. **Trust the empty knobs** — `/technology` and `/legal`.
-6. **Design-in** — `/design-in`.
-
-Do not send a first-time visitor into Nexus, teaching locks, or counsel packets.
-
-## Files
-
-- Tokens: `src/styles/tokens.css`
-- Components: consume tokens only
-- Mark: `public/brand/mark.svg`
-- Public kit page: `/brand`

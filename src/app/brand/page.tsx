@@ -7,16 +7,18 @@ export const metadata: Metadata = {
 };
 
 const SWATCHES = [
-  { name: "Void", var: "--fv-void", hex: "#06080c" },
-  { name: "Ink", var: "--fv-ink", hex: "#0a0d12" },
-  { name: "Slate", var: "--fv-slate", hex: "#121821" },
+  { name: "Void", var: "--fv-void", hex: "#07060c" },
+  { name: "Ink", var: "--fv-ink", hex: "#0c0914" },
+  { name: "Slate", var: "--fv-slate", hex: "#16111f" },
   { name: "Paper", var: "--fv-paper", hex: "#e7eef6" },
   { name: "Mist", var: "--fv-mist", hex: "#a7b4c4" },
+  { name: "Vital (Purple)", var: "--fv-vital", hex: "#c084fc" },
+  { name: "Vital Deep", var: "--fv-vital-deep", hex: "#4c1d95" },
   { name: "Gallium", var: "--fv-gallium", hex: "#5ee0d2" },
   { name: "Gallium deep", var: "--fv-gallium-deep", hex: "#0c4f4a" },
   { name: "Stallion", var: "--fv-stallion", hex: "#e8a04a" },
   { name: "Stallion deep", var: "--fv-stallion-deep", hex: "#7a3d10" },
-  { name: "Signal", var: "--fv-signal", hex: "#8eb4ff" },
+  { name: "Signal", var: "--fv-signal", hex: "#c084fc" },
 ];
 
 export default function BrandPage() {
@@ -67,7 +69,8 @@ export default function BrandPage() {
         <h2>Voice</h2>
         <p>
           Precise, adult, slightly severe. Prefer “compiled” over “up to.” Prefer “partner cubes” over “our HBM.”
-          Never “world-class,” “revolutionary,” or a TB/s that the identity will not print.
+          Never “world-class,” “revolutionary,” or a TB/s that the identity will not print. Purple is vitality, not
+          decoration. India is origin, not the market sentence. Export control is a constraint, not a slogan.
         </p>
       </section>
     </article>

@@ -11,6 +11,7 @@ const paths = [
   "/products/stallion",
   "/products/stallion/s100",
   "/products/stallion/s80i",
+  "/systems",
   "/architecture",
   "/technology",
   "/specifications",

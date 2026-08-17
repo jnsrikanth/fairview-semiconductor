@@ -13,7 +13,9 @@ export const COMPANY = {
   name: "FairView Semiconductor",
   short: "FairView",
   legal: "FairView Semiconductor",
-  tagline: "The memory lock. The GPU lock. One package.",
+  tagline: "A clear view through the package.",
+  manifesto:
+    "Fairchild made the transistor a product and a valley grew around it. Today, as the world stands at the tipping point into next-generation AI and voracious computing, FairView Semiconductor is formed to become the genesis for the 21st-century compute era—unifying HBM4 memory and GPU compute on single packages and 1U/2U/3U blade servers.",
   email: "design-in@fairviewsemi.com",
   press: "press@fairviewsemi.com",
 } as const;
@@ -289,6 +291,66 @@ export const SIDECAR_OPS = [
   { op: "LINK_HB", dir: "Both", payload: "Heartbeat" },
 ] as const;
 
+export const BLADE_SERVERS = {
+  family: "Blade Server Series",
+  role: "Enterprise & Hyperscale Rack Systems (2027 Book)",
+  oneLiner:
+    "1U, 2U, and 3U form-factor high-density blade servers powered by Stallion GPUs and Gallium HBM4 memory for 2027 and beyond.",
+  skus: [
+    {
+      id: "FV-RACK-1U",
+      slug: "1u",
+      name: "Apex 1U Compute Blade",
+      formFactor: "1U Rack-Mount Blade Chassis",
+      delivery: "2027 Delivery",
+      computeConfig: "4x Stallion S80I or 2x Stallion S100 Modules",
+      tflopsFP32: "118.0 TFLOPS FP32 / 943.8 Tensor TFLOPS",
+      memoryHBM4: "576 GB Unified HBM4",
+      memoryBandwidth: "32.768 TB/s Aggregate",
+      interconnect: "Dual PCIe Gen6 x16 + CXL 3.1 Memory Pooling",
+      storage: "8x Hot-Swap NVMe Gen5 (E1.S / U.2)",
+      networking: "Dual 800GbE OSFP (RDMA / RoCEv2)",
+      cooling: "Direct-to-Chip Liquid or High-Static Air",
+      powerDraw: "1,800W Peak / Redundant 80-Plus Titanium",
+      primaryRole: "High-Density Inference, Real-Time Edge Processing & Financial Modeling",
+    },
+    {
+      id: "FV-RACK-2U",
+      slug: "2u",
+      name: "Sovereign 2U AI Blade",
+      formFactor: "2U Enterprise Scalable Chassis",
+      delivery: "2027 Delivery",
+      computeConfig: "8x Stallion S100 Training & Compute Nodes",
+      tflopsFP32: "471.9 TFLOPS FP32 / 3,775.2 Tensor TFLOPS",
+      memoryHBM4: "1,152 GB (1.15 TB) Unified HBM4",
+      memoryBandwidth: "65.536 TB/s Aggregate",
+      interconnect: "Quad PCIe Gen6 x16 with CXL 3.1 & UCIe-E Switch Fabric",
+      storage: "16x Hot-Swap NVMe Gen5 U.2 Storage Bays",
+      networking: "Quad 800GbE OSFP with Ultra-Low Latency Fabric",
+      cooling: "Liquid-Assisted Cold Plate Modular Cooling",
+      powerDraw: "4,200W Peak / Dual Redundant Titanium",
+      primaryRole: "Frontier LLM Fine-Tuning, Sovereign Enterprise Clouds & Multi-Modal Models",
+    },
+    {
+      id: "FV-RACK-3U",
+      slug: "3u",
+      name: "Megascale 3U Cluster Engine",
+      formFactor: "3U Modular High-Density Rack Engine",
+      delivery: "2027 Delivery",
+      computeConfig: "16x Stallion S100/S80I Hybrid Die Matrix",
+      tflopsFP32: "943.7 TFLOPS FP32 / 7,550.4 Tensor TFLOPS",
+      memoryHBM4: "2,304 GB (2.30 TB) Unified HBM4",
+      memoryBandwidth: "131.072 TB/s Aggregate",
+      interconnect: "Octal PCIe Gen6 x16 + CXL 3.1 Dynamic Memory Expansion",
+      storage: "24x Hot-Swap NVMe Gen5 Hot-Swap Carrier",
+      networking: "Octal 800GbE OSFP / NDR InfiniBand Compatible",
+      cooling: "Full Direct Liquid Immersion & Dual Cold-Plate Loop",
+      powerDraw: "8,500W Peak / 3-Phase Smart Power Delivery",
+      primaryRole: "Mega-Scale Foundation Model Pre-Training & Supercomputing Clusters",
+    },
+  ],
+} as const;
+
 export function galliumSku(slug: string) {
   const sku = GALLIUM.skus.find((s) => s.slug === slug);
   if (!sku) throw new Error(`Unknown Gallium SKU ${slug}`);
@@ -300,3 +362,10 @@ export function stallionSku(slug: string) {
   if (!sku) throw new Error(`Unknown Stallion SKU ${slug}`);
   return sku;
 }
+
+export function bladeSku(slug: string) {
+  const sku = BLADE_SERVERS.skus.find((s) => s.slug === slug);
+  if (!sku) throw new Error(`Unknown Blade Server SKU ${slug}`);
+  return sku;
+}
+

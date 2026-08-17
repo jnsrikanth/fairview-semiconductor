@@ -20,16 +20,26 @@ export const PRIMARY_NAV: NavItem[] = [
       { href: "/products/stallion/s80i", label: "FV-ST-S80I", hint: "Inference 96 SM" },
     ],
   },
+  {
+    href: "/systems",
+    label: "Systems & Blades",
+    children: [
+      { href: "/systems#blade-1u", label: "Apex 1U Blade", hint: "High-density inference (2027)" },
+      { href: "/systems#blade-2u", label: "Sovereign 2U Blade", hint: "Enterprise training (2027)" },
+      { href: "/systems#blade-3u", label: "Megascale 3U Engine", hint: "Foundation cluster rack (2027)" },
+    ],
+  },
   { href: "/architecture", label: "Architecture" },
   { href: "/technology", label: "Technology" },
   { href: "/specifications", label: "Specifications" },
-  { href: "/company", label: "Company" },
+  { href: "/company", label: "Genesis & Vision" },
 ];
 
 export const FOOTER_NAV = {
   products: [
     { href: "/products/gallium", label: "Gallium HBM4" },
     { href: "/products/stallion", label: "Stallion GPU" },
+    { href: "/systems", label: "Blade Servers (1U / 2U / 3U)" },
     { href: "/specifications", label: "Public specifications" },
   ],
   engineering: [
@@ -38,7 +48,8 @@ export const FOOTER_NAV = {
     { href: "/brand", label: "Brand kit" },
   ],
   company: [
-    { href: "/company", label: "About FairView" },
+    { href: "/company", label: "Fairchild Genesis & Vision" },
+    { href: "/company#markets", label: "21st Century Markets" },
     { href: "/design-in", label: "Design-in" },
     { href: "/legal", label: "Public-facts notice" },
   ],

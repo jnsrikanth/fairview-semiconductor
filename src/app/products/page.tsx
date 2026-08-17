@@ -34,6 +34,23 @@ export default function ProductsPage() {
           </div>
         </Link>
       </div>
+
+      <div style={{ marginTop: "2rem" }}>
+        <article className="feature" style={{ borderLeft: "4px solid var(--fv-vital-bright)", padding: "1.6rem" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: "1rem" }}>
+            <div>
+              <span className="badge-vital">2027 Systems Roadmap</span>
+              <h2 style={{ marginTop: "0.4rem", fontSize: "1.4rem" }}>1U, 2U, and 3U High-Density Blade Servers</h2>
+              <p style={{ marginTop: "0.2rem", maxWidth: "44rem" }}>
+                Pre-configured enterprise and data center blade server systems combining Stallion GPUs with Gallium HBM4 memory up to 131.072 TB/s aggregate throughput.
+              </p>
+            </div>
+            <Link href="/systems" className="btn btn-vital">
+              Explore Blade Servers &rarr;
+            </Link>
+          </div>
+        </article>
+      </div>
     </div>
   );
 }
