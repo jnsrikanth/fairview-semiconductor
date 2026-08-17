@@ -15,8 +15,8 @@ export function Footer() {
               <span>Semiconductor</span>
             </span>
           </Link>
-          <p className="muted" style={{ marginTop: "1rem", maxWidth: "24rem" }}>
-            Unifying ultra-high-bandwidth HBM4 memory with high-performance GPU compute dies and 1U/2U/3U enterprise blade servers.
+          <p className="muted" style={{ marginTop: "1rem", maxWidth: "22rem" }}>
+            {COMPANY.tagline} Gallium holds the bandwidth. Stallion spends it. UCIe is not HBM.
           </p>
         </div>
         <div>
@@ -30,9 +30,9 @@ export function Footer() {
           </ul>
         </div>
         <div>
-          <h2>Architecture</h2>
+          <h2>Engineering</h2>
           <ul>
-            {FOOTER_NAV.architecture.map((l) => (
+            {FOOTER_NAV.engineering.map((l) => (
               <li key={l.href}>
                 <Link href={l.href}>{l.label}</Link>
               </li>

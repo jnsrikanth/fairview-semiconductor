@@ -6,7 +6,7 @@ import { GenesisTimeline } from "@/components/GenesisTimeline";
 import { MarketGrid } from "@/components/MarketGrid";
 
 export const metadata: Metadata = {
-  title: "The Genesis & Vision | FairView Semiconductor",
+  title: "Genesis & Vision | FairView Semiconductor",
   description:
     "The story of FairView Semiconductor: formed at the tipping point of the AI revolution, carrying the mantle of Fairchild Semiconductor to pioneer 21st-century compute across blade servers, automotive, space, and beyond.",
 };
@@ -28,7 +28,7 @@ export default function CompanyPage() {
             2027 Blade Server Systems
           </Link>
           <Link href="/design-in" className="btn btn-ghost">
-            Design-In Engagement
+            Design-in Access
           </Link>
         </div>
       </header>
@@ -42,30 +42,26 @@ export default function CompanyPage() {
               <h2>The Fairchild Heritage for the AI Century</h2>
               <p>{STORY.fairchildParallel}</p>
               <p>
-                When Robert Noyce, Gordon Moore, and the legendary founders established Fairchild Semiconductor in 1957,
-                they recognized that vacuum tubes had reached an insurmountable physical ceiling. By inventing the planar
-                process, Fairchild catalyzed the modern semiconductor industry and birthed Silicon Valley.
+                When Robert Noyce, Gordon Moore, and the legendary &ldquo;Traitorous Eight&rdquo; founded Fairchild Semiconductor in 1957,
+                they recognized that vacuum tubes had reached an insurmountable thermal and physical limit. By inventing the planar process,
+                Fairchild catalyzed the modern semiconductor industry and birthed Silicon Valley.
               </p>
               <p>
-                Today, humanity stands at a comparable inflection point. Traditional computing architectures are throttled
-                by the memory wall: GPUs spend critical execution cycles waiting for memory buses, and data center clusters
-                drown in interconnect latency. FairView was formed to solve this foundational bottleneck—unifying high-bandwidth
-                HBM4 memory architecture and high-performance GPU compute dies into a single, cohesive silicon reality.
+                Today, humanity stands at a comparable inflection point. Traditional computing architectures are throttled by the memory wall:
+                GPUs spend critical clock cycles waiting for memory buses, and data center clusters drown in interconnect latency.
+                FairView was created to solve this foundational bottleneck—unifying high-bandwidth HBM4 memory architecture and high-performance
+                GPU compute dies into a single, cohesive silicon reality.
               </p>
             </div>
 
             <div>
               <h2>21st-Century Multi-Segment Expansion</h2>
+              <p>{STORY.twentyFirstCenturyVision}</p>
               <p>
-                While hyperscale AI represents our first silicon tape-out, FairView is building the compute foundation for
-                the next fifty years of technology:
+                Our 2027 book brings <strong>1U, 2U, and 3U form-factor high-density blade servers</strong> directly into enterprise and cloud data centers.
+                Beyond the data center, our deterministic memory locks scale into Level 4/5 autonomous vehicles requiring instantaneous 360-degree sensor fusion,
+                radiation-hardened orbital satellite constellations, and next-generation mobile creative workstations.
               </p>
-              <ul style={{ paddingLeft: "1.2rem", display: "grid", gap: "0.5rem", color: "var(--fv-mist)" }}>
-                <li><strong>Enterprise Blade Servers:</strong> 1U, 2U, and 3U form factors delivering up to 131 TB/s of memory throughput in 2027.</li>
-                <li><strong>Autonomous Driving:</strong> Real-time 360-degree sensor fusion without memory starvation.</li>
-                <li><strong>Satellite &amp; Space Comms:</strong> Radiation-hardened, low-latency orbital edge computing.</li>
-                <li><strong>Pro Workstations:</strong> Compact high-bandwidth unified memory for next-generation creative systems.</li>
-              </ul>
             </div>
 
             <div>
@@ -75,7 +71,7 @@ export default function CompanyPage() {
             </div>
 
             <div>
-              <h2>The Cinematic Spirit &amp; Purple Vitality</h2>
+              <h2>Vibe, Vitality &amp; The Cinematic Spirit</h2>
               <p>{STORY.vibeStatement}</p>
             </div>
 
@@ -101,10 +97,10 @@ export default function CompanyPage() {
             </article>
 
             <article className="feature">
-              <h3>Design-In Engineering</h3>
-              <p>Custom partner cube configuration, GPU topology, and 2027 enterprise rack allocations.</p>
+              <h3>Design-in Engineering</h3>
+              <p>Partner cube configuration, Stallion GPU topology, and custom rack allocations. Empty knobs stay empty.</p>
               <Link className="btn btn-primary" href="/design-in" style={{ marginTop: "0.6rem" }}>
-                Contact Systems Architecture
+                Contact Silicon Architecture Team
               </Link>
             </article>
           </aside>
@@ -116,7 +112,7 @@ export default function CompanyPage() {
         <div className="wrap">
           <div className="section-head">
             <p className="kicker">Historical Lineage</p>
-            <h2>Three Epochs of Silicon Genesis</h2>
+            <h2>The Three Epochs of Silicon Genesis</h2>
             <p>From the birth of the planar transistor to the unified memory-compute architecture of the AI Century.</p>
           </div>
           <GenesisTimeline />
@@ -135,19 +131,20 @@ export default function CompanyPage() {
         </div>
       </section>
 
-      {/* Bottom CTA */}
+      {/* Next Step Actions */}
       <section className="section">
         <div className="wrap stack">
           <div className="section-head">
             <p className="kicker">Engage with FairView</p>
             <h2>Build on the Next Genesis of Computing.</h2>
             <p>
-              Connect with our silicon and systems engineering teams for 2027 blade server deployments and custom package design-in.
+              Whether you are architecting a hyperscale AI data center, sovereign cloud cluster, or 2027 blade server deployment,
+              our silicon engineering team is ready to collaborate.
             </p>
           </div>
           <div className="hero-actions">
             <Link className="btn btn-primary" href="/design-in">
-              Initiate Design-In Protocol
+              Initiate Design-in Protocol
             </Link>
             <Link className="btn btn-vital" href="/systems">
               Explore 1U/2U/3U Blade Servers

@@ -4,145 +4,130 @@ import { PackageDiagram } from "@/components/diagrams/PackageDiagram";
 import { BladeServerShowcase } from "@/components/BladeServerShowcase";
 import { GenesisTimeline } from "@/components/GenesisTimeline";
 import { MarketGrid } from "@/components/MarketGrid";
-import { FIRST_PACKAGE, GALLIUM, STALLION, BLADE_SERVERS, DIFFERENTIATORS, COMPANY } from "@/content/specs";
+import { GALLIUM, STALLION, BLADE_SERVERS, COMPANY } from "@/content/specs";
 import { STORY } from "@/content/story";
 
 export default function HomePage() {
-  const s100 = STALLION.skus[0];
-
   return (
     <>
       {/* Cinematic Hero */}
       <HaloStage
         videoSrc="/videos/hero-package.mp4"
         poster="/images/hero-package.webp"
-        alt="Cinematic 3D view of a Stallion compute die and four Gallium partner HBM cubes in a violet halo"
+        alt="Cinematic 3D view of a Stallion compute die and Gallium HBM4 memory cubes in a royal purple halo"
       >
-        <p className="kicker">FairView Semiconductor</p>
+        <p className="kicker">FairView Semiconductor · Silicon Genesis</p>
         <h1>The Genesis of 21st-Century Computing.</h1>
         <p className="lede">
           {COMPANY.manifesto}
         </p>
         <div className="hero-actions">
+          <Link className="btn btn-vital" href="/systems">
+            Explore 2027 Blade Systems
+          </Link>
           <Link className="btn btn-gallium" href="/products/gallium">
             Gallium HBM4
           </Link>
           <Link className="btn btn-stallion" href="/products/stallion">
             Stallion GPU
           </Link>
-          <Link className="btn btn-vital" href="/systems">
-            1U · 2U · 3U Blade Systems
-          </Link>
           <Link className="btn btn-ghost" href="/company">
-            The Fairchild Story
+            The Fairchild Lineage
           </Link>
         </div>
       </HaloStage>
 
-      {/* Metrics Section */}
-      <section className="section" aria-label="Compiled identities">
+      {/* High-Impact Headline Metrics (Clean & Formula-Free) */}
+      <section className="section" aria-label="Key Breakthrough Metrics">
         <div className="wrap">
           <dl className="metrics">
             <div className="metric">
-              <dt>Per stack · JESD270-4</dt>
-              <dd>
-                {FIRST_PACKAGE.stackTBs.toFixed(3)} TB/s
-                <small>2048 × 8 / 8000 · HBM4 Physical Lock</small>
+              <dt>Next-Gen HBM4 Bandwidth</dt>
+              <dd style={{ color: "var(--fv-gallium)" }}>
+                8.192 TB/s
+                <small>4-Cube Flagship Silicon Package</small>
               </dd>
             </div>
             <div className="metric">
-              <dt>First package</dt>
-              <dd>
-                {FIRST_PACKAGE.aggTBs.toFixed(3)} TB/s
-                <small>4 cubes · 144 GB · 12-hi × 24 Gb</small>
-              </dd>
-            </div>
-            <div className="metric">
-              <dt>Stallion S100 FP32</dt>
-              <dd>
-                {s100.fp32Display} TFLOPS
-                <small>128 SM × 128 ALU × 2 × 1.8 / 1000</small>
-              </dd>
-            </div>
-            <div className="metric">
-              <dt>3U Blade Peak HBM4</dt>
+              <dt>Peak 3U Blade Memory</dt>
               <dd style={{ color: "var(--fv-vital-bright)" }}>
                 131.072 TB/s
-                <small>16 Nodes · 2.30 TB HBM4 (2027 Book)</small>
+                <small>16-Node Rack-Scale Supercomputing</small>
+              </dd>
+            </div>
+            <div className="metric">
+              <dt>Stallion S100 AI Compute</dt>
+              <dd style={{ color: "var(--fv-stallion)" }}>
+                59.0 TFLOPS
+                <small>FP32 Density · 471.9 Tensor TFLOPS</small>
+              </dd>
+            </div>
+            <div className="metric">
+              <dt>Turnkey Systems Delivery</dt>
+              <dd>
+                2027 Book
+                <small>1U · 2U · 3U Enterprise Blade Series</small>
               </dd>
             </div>
           </dl>
         </div>
       </section>
 
-      {/* Genesis & The Fairchild Parallel */}
+      {/* The Core Breakthrough: Solving the Memory Wall */}
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="wrap two-col">
           <div className="stack">
-            <p className="kicker" style={{ color: "var(--fv-vital-bright)" }}>The Genesis Parallel</p>
-            <h2>From Fairchild 1957 to FairView 2027.</h2>
+            <p className="kicker" style={{ color: "var(--fv-vital-bright)" }}>The Architectural Breakthrough</p>
+            <h2>Shattering the AI Memory Wall.</h2>
             <p>{STORY.whyNow}</p>
-            <p>{STORY.fairchildParallel}</p>
-            <p>{STORY.valley}</p>
-            <div style={{ marginTop: "0.5rem" }}>
-              <Link className="btn btn-vital" href="/company">
-                Read the Full Genesis Story →
+            <p>{STORY.memoryWallSolution}</p>
+            <div style={{ display: "flex", gap: "1rem", marginTop: "0.5rem" }}>
+              <Link className="btn btn-vital" href="/products/gallium">
+                Explore Gallium HBM4 &rarr;
+              </Link>
+              <Link className="btn btn-ghost" href="/architecture">
+                Inspect 2.5D Package
               </Link>
             </div>
           </div>
           <figure className="media-frame">
-            <img src="/images/hero-field.webp" alt="FairView Semiconductor Silicon Genesis" />
+            <img src="/images/hero-field.webp" alt="FairView Semiconductor Advanced Silicon Architecture" />
           </figure>
         </div>
       </section>
 
-      {/* Timeline Section */}
+      {/* Product Families Showcase (Silicon to Systems) */}
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="wrap">
           <div className="section-head">
-            <p className="kicker">Evolution of Computing</p>
-            <h2>Three Epochs of Silicon Genesis</h2>
+            <p className="kicker">Product Ecosystem</p>
+            <h2>From Silicon Dies to Turnkey Rack Systems</h2>
             <p>
-              How fundamental physics transformed into the modern computing infrastructure of civilization.
-            </p>
-          </div>
-          <GenesisTimeline />
-        </div>
-      </section>
-
-      {/* Product Families */}
-      <section className="section" style={{ paddingTop: 0 }}>
-        <div className="wrap">
-          <div className="section-head">
-            <p className="kicker">Core Silicon Families</p>
-            <h2>Memory Chipset &amp; AI Compute</h2>
-            <p>
-              Aggregate HBM bandwidth is owned by Gallium. Stallion mirrors it for the compute roofline.
-              Together, they form the foundation of next-gen packages and blade architectures.
+              An integrated portfolio engineered to power every level of the AI compute stack with uncompromising memory throughput.
             </p>
           </div>
           <div className="split">
             <Link href="/products/gallium" className="product-card gallium">
               <img src="/images/gallium-cube.webp" alt="Gallium HBM4 Memory Cube" />
               <div className="pad">
-                <p className="kicker">Memory chipset</p>
+                <p className="kicker">Memory Architecture</p>
                 <h2>{GALLIUM.family}</h2>
-                <p>{GALLIUM.oneLiner}</p>
+                <p>8.192+ TB/s HBM4 memory chipset delivering the fastest data attach in the industry.</p>
               </div>
             </Link>
             <Link href="/products/stallion" className="product-card stallion">
               <img src="/images/stallion-die.webp" alt="Stallion AI Compute Die" />
               <div className="pad">
-                <p className="kicker stallion">GPU / accelerator</p>
+                <p className="kicker stallion">AI Accelerator</p>
                 <h2>{STALLION.family}</h2>
-                <p>{STALLION.oneLiner}</p>
+                <p>High-density GPU compute die with unified access to the HBM4 memory plane.</p>
               </div>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Blade Servers Preview Section (2027 Roadmap) */}
+      {/* Interactive 2027 Enterprise Blade Systems Showcase */}
       <section className="section" id="systems">
         <div className="wrap">
           <div className="section-head">
@@ -151,90 +136,84 @@ export default function HomePage() {
             <p>{BLADE_SERVERS.oneLiner}</p>
           </div>
           <BladeServerShowcase />
-          <p style={{ marginTop: "1.5rem" }}>
-            <Link className="btn btn-ghost" href="/systems">
-              View Detailed Blade Systems Specifications &rarr;
+          <div style={{ marginTop: "1.5rem", display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+            <Link className="btn btn-vital" href="/systems">
+              Explore Full Blade Server Lineup &rarr;
             </Link>
-          </p>
+            <Link className="btn btn-ghost" href="/design-in">
+              Request OEM Early Access Brief
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* 21st Century Multi-Segment Roadmap */}
+      {/* The Fairchild Genesis & Historical Lineage */}
+      <section className="section" style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <div className="section-head">
+            <p className="kicker">The Lineage</p>
+            <h2>{STORY.genesisTitle}</h2>
+            <p>{STORY.fairchildParallel}</p>
+          </div>
+          <GenesisTimeline />
+          <div style={{ marginTop: "1.25rem" }}>
+            <Link className="btn btn-ghost" href="/company">
+              Read the Full Genesis Story &rarr;
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 21st-Century Multi-Segment Horizons */}
       <section className="section" id="markets">
         <div className="wrap">
           <div className="section-head">
             <p className="kicker">21st-Century Horizons</p>
-            <h2>AI First. Expanding to Every Critical Frontier.</h2>
-            <p>{STORY.twentyFirstCenturyVision}</p>
+            <h2>Built for the Next Fifty Years of Computing</h2>
+            <p>From hyperscale AI clusters to autonomous mobility, orbital satellites, and personal workstations.</p>
           </div>
           <MarketGrid />
         </div>
       </section>
 
-      {/* Architecture Section */}
+      {/* Silicon Package Architecture Preview */}
       <section className="section">
         <div className="wrap">
           <div className="section-head">
             <p className="kicker">Package Architecture</p>
-            <h2>A die set, not a slogan.</h2>
+            <h2>Unified 2.5D CoWoS Silicon Packaging</h2>
             <p>
-              First silicon is four partner cubes on a CoWoS-class interposer, Gallium-HX as its own chiplet,
-              Stallion as the compute die, and host I/O on PCIe 6 / CXL 3.1.
+              Four partner HBM4 memory cubes, Gallium controller chiplet, and Stallion compute die united over an advanced silicon interposer.
             </p>
           </div>
           <PackageDiagram />
           <p style={{ marginTop: "1.2rem" }}>
             <Link className="btn btn-ghost" href="/architecture">
-              Inspect Full Architecture Map
+              Inspect Full Architecture Map &rarr;
             </Link>
           </p>
         </div>
       </section>
 
-      {/* The Lock & Differentiators */}
-      <section className="section">
-        <div className="wrap">
-          <div className="section-head">
-            <p className="kicker">The Lock</p>
-            <h2>Differentiation that survives a JEDEC lawyer.</h2>
-          </div>
-          <div className="feature-grid">
-            {DIFFERENTIATORS.map((d) => (
-              <article className="feature" key={d.title}>
-                <h3>{d.title}</h3>
-                <p>{d.body}</p>
-              </article>
-            ))}
-            <article className="feature">
-              <h3>Honest identities</h3>
-              <p>
-                Every number on this site is a public standard fact, a founder-locked SKU, or arithmetic.
-                Empty knobs stay empty.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      {/* Design-in CTA */}
+      {/* Bottom CTA */}
       <section className="section">
         <div className="wrap stack">
           <div className="section-head">
-            <p className="kicker">Design-in</p>
-            <h2>Tell us the attach. We will not invent a pin-rate.</h2>
+            <p className="kicker">Engage with FairView</p>
+            <h2>Build the Future of Computing with Us.</h2>
             <p>
-              FairView is not a DRAM IDM. Cubes are partnered known-good stacks. {STORY.export}
+              Connect with our silicon and systems architecture teams for 2027 enterprise blade allocations and custom package design-in.
             </p>
           </div>
           <div className="hero-actions">
             <Link className="btn btn-primary" href="/design-in">
-              Start a design-in
+              Request Design-In Allocation
             </Link>
             <Link className="btn btn-vital" href="/systems">
-              Explore 1U/2U/3U Blade Servers
+              Explore Blade Servers
             </Link>
             <Link className="btn btn-ghost" href="/specifications">
-              Public specifications
+              Engineering Datasheets
             </Link>
           </div>
         </div>

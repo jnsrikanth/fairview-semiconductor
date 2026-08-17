@@ -27,7 +27,7 @@ export function BladeServerShowcase() {
               <span className="blade-tab-unit">{blade.slug.toUpperCase()}</span>
               <div className="blade-tab-info">
                 <span className="blade-tab-title">{blade.name}</span>
-                <span className="blade-tab-meta">{blade.memoryBandwidth}</span>
+                <span className="blade-tab-meta">{blade.delivery} · {blade.memoryBandwidth}</span>
               </div>
             </button>
           );
@@ -44,23 +44,23 @@ export function BladeServerShowcase() {
         <div className="blade-chassis-visual">
           <div className="chassis-header">
             <div className="chassis-leds">
-              <span className="led led-vital" title="System Vitality: Optimal"></span>
-              <span className="led led-gallium" title="HBM4 Bandwidth: Synced"></span>
-              <span className="led led-stallion" title="GPU Array: Online"></span>
+              <span className="led led-vital" title="System Vitality Status: Optimal"></span>
+              <span className="led led-gallium" title="Gallium HBM4 Link: Synced"></span>
+              <span className="led led-stallion" title="Stallion GPU Clocks: Locked"></span>
             </div>
             <div className="chassis-label">
               <strong>FAIRVIEW SYSTEMS</strong> · {currentBlade.id} · {currentBlade.formFactor.toUpperCase()}
             </div>
-            <span className="badge-vital">{currentBlade.delivery}</span>
+            <span className="badge badge-vital">{currentBlade.delivery}</span>
           </div>
 
           {/* Schematic visual based on form factor */}
           <div className={`chassis-rack-unit unit-${currentBlade.slug}`}>
             <div className="chassis-front-bay">
-              <div className="bay-label">STORAGE &amp; I/O MATRIX</div>
+              <div className="bay-label">STORAGE / I/O</div>
               <div className="drive-slots">
                 {Array.from({ length: currentBlade.slug === "1u" ? 8 : currentBlade.slug === "2u" ? 16 : 24 }).map((_, i) => (
-                  <div key={i} className="drive-slot" title={`NVMe Gen5 Bay ${i + 1}`}>
+                  <div key={i} className="drive-slot" title={`Gen5 NVMe Bay ${i + 1}`}>
                     <span className="drive-led"></span>
                   </div>
                 ))}
@@ -68,13 +68,13 @@ export function BladeServerShowcase() {
             </div>
 
             <div className="chassis-compute-block">
-              <div className="compute-label">UNIFIED GPU + HBM4 COMPUTE MATRIX</div>
+              <div className="compute-label">COMPUTE MATRIX (GPU + HBM4 UNIFIED)</div>
               <div className="silicon-grid">
                 {Array.from({ length: currentBlade.slug === "1u" ? 4 : currentBlade.slug === "2u" ? 8 : 16 }).map((_, i) => (
                   <div key={i} className="gpu-node-box">
-                    <span className="gpu-node-title">ACCELERATOR NODE {i + 1}</span>
+                    <span className="gpu-node-title">NODE {i + 1}</span>
                     <span className="gpu-node-tech">STALLION + GALLIUM</span>
-                    <span className="gpu-node-hbm">HBM4 UNIFIED PLANE</span>
+                    <span className="gpu-node-hbm">HBM4 8.192 TB/s</span>
                   </div>
                 ))}
               </div>
@@ -82,9 +82,9 @@ export function BladeServerShowcase() {
 
             <div className="chassis-rear-io">
               <div className="io-ports">
-                <span className="port-tag">CXL 3.1 / PCIe Gen6 Fabric</span>
-                <span className="port-tag">800GbE OSFP Networking</span>
-                <span className="port-tag liquid-tag">DIRECT-TO-CHIP LIQUID COOLING</span>
+                <span className="port-tag">CXL 3.1 / PCIe 6</span>
+                <span className="port-tag">800GbE OSFP</span>
+                <span className="port-tag liquid-tag">LIQUID LOOP IN/OUT</span>
               </div>
             </div>
           </div>
@@ -93,9 +93,9 @@ export function BladeServerShowcase() {
         {/* Technical specs breakdown */}
         <div className="blade-details-grid">
           <div className="blade-stat-card">
-            <span className="stat-label">Compute Density</span>
+            <span className="stat-label">Compute Capacity</span>
             <strong className="stat-val stat-vital">{currentBlade.computeConfig}</strong>
-            <span className="stat-sub">High-Efficiency Tensor Engine</span>
+            <span className="stat-sub">{currentBlade.tflopsFP32}</span>
           </div>
 
           <div className="blade-stat-card">
@@ -105,13 +105,13 @@ export function BladeServerShowcase() {
           </div>
 
           <div className="blade-stat-card">
-            <span className="stat-label">Interconnect &amp; Fabric</span>
+            <span className="stat-label">Fabric & Interconnect</span>
             <strong className="stat-val">{currentBlade.interconnect}</strong>
             <span className="stat-sub">{currentBlade.networking}</span>
           </div>
 
           <div className="blade-stat-card">
-            <span className="stat-label">Thermal Efficiency</span>
+            <span className="stat-label">Thermal & Power Architecture</span>
             <strong className="stat-val stat-stallion">{currentBlade.powerDraw}</strong>
             <span className="stat-sub">{currentBlade.cooling}</span>
           </div>
@@ -119,10 +119,10 @@ export function BladeServerShowcase() {
 
         <div className="blade-footer-actions">
           <div className="blade-role-summary">
-            <strong>Target Workload:</strong> {currentBlade.primaryRole}
+            <strong>Target Architecture Role:</strong> {currentBlade.primaryRole}
           </div>
           <Link href="/design-in" className="btn btn-primary">
-            Request {currentBlade.id} Early Access Allocation
+            Request {currentBlade.id} Early Access Packet
           </Link>
         </div>
       </div>
