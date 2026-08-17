@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Fraunces, IBM_Plex_Mono, Plus_Jakarta_Sans, Source_Serif_4 } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { COMPANY } from "@/content/specs";
@@ -24,68 +23,51 @@ const jsonLd = {
   ],
 };
 
-const sans = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  display: "swap",
-});
-
-const display = Fraunces({
-  subsets: ["latin"],
-  variable: "--font-display",
-  display: "swap",
-});
-
-const serif = Source_Serif_4({
-  subsets: ["latin"],
-  variable: "--font-serif",
-  display: "swap",
-});
-
-const mono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-mono",
-  display: "swap",
-});
-
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${COMPANY.name} — Gallium HBM4 & Stallion GPU`,
-    template: `%s · ${COMPANY.short}`,
+    default: `FairView Semi — Gallium HBM4 & Stallion GPU`,
+    template: `%s · FairView Semi`,
   },
   description:
-    "FairView Semiconductor designs the Gallium HBM4 memory chipset and the Stallion GPU series. Bandwidth is compiled from public JEDEC facts. UCIe is not HBM.",
+    "FairView Semiconductor is redefining the frontier of compute and memory — unifying Gallium HBM4 and Stallion GPU architectures into a single silicon package.",
   keywords: [
     "FairView Semiconductor",
+    "FairView Semi",
     "Gallium HBM4",
     "Stallion GPU",
-    "HBM4 chipset",
-    "JESD270-4",
-    "SPHBM4",
-    "AI accelerator",
+    "HBM4 Chipset",
+    "Blade Servers",
+    "AI Acceleration",
   ],
   openGraph: {
     type: "website",
     locale: "en_US",
     siteName: COMPANY.name,
-    title: `${COMPANY.name} — Gallium HBM4 & Stallion GPU`,
+    title: `FairView Semi — Gallium HBM4 & Stallion GPU`,
     description: COMPANY.tagline,
-    images: [{ url: "/images/hero-package.jpg", width: 1920, height: 1080, alt: "FairView package render" }],
+    images: [{ url: "/images/hero-gpu-die.jpg", width: 1920, height: 1080, alt: "FairView Semiconductor AI Die" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: COMPANY.name,
+    title: `FairView Semi — Gallium HBM4 & Stallion GPU`,
     description: COMPANY.tagline,
-    images: ["/images/hero-package.jpg"],
+    images: ["/images/hero-gpu-die.jpg"],
   },
   robots: { index: true, follow: true },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${sans.variable} ${display.variable} ${serif.variable} ${mono.variable}`}>
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body>
         <script
           type="application/ld+json"

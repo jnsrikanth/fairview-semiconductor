@@ -4,62 +4,42 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { BrandMark } from "./BrandMark";
-import { PRIMARY_NAV } from "@/content/nav";
 
 export function Header() {
   const path = usePathname();
   const [open, setOpen] = useState(false);
-
-  const current = (href: string) =>
-    href === "/" ? path === "/" : path === href || path.startsWith(`${href}/`);
 
   return (
     <header className="site-header">
       <div className="header-inner">
         <Link href="/" className="brand" onClick={() => setOpen(false)}>
           <BrandMark />
-          <span className="brand-word">
-            <strong>FairView</strong>
-            <span>Semiconductor</span>
+          <span className="brand-wordmark">
+            <span className="brand-fairview">FairView</span>
+            <span className="brand-semi">Semi</span>
           </span>
         </Link>
 
         <nav className="nav-desktop" aria-label="Primary">
-          {PRIMARY_NAV.map((item) =>
-            item.children ? (
-              <div className="nav-flyout" key={item.href}>
-                <Link
-                  href={item.href}
-                  className="nav-link"
-                  aria-current={current(item.href) ? "page" : undefined}
-                  aria-haspopup="true"
-                >
-                  {item.label}
-                </Link>
-                <div className="nav-panel" role="group" aria-label={item.label}>
-                  {item.children.map((child) => (
-                    <Link href={child.href} key={child.href}>
-                      <strong>{child.label}</strong>
-                      <span>{child.hint}</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            ) : (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="nav-link"
-                aria-current={current(item.href) ? "page" : undefined}
-              >
-                {item.label}
-              </Link>
-            ),
-          )}
+          <Link href="/products" className="nav-link">
+            Products
+          </Link>
+          <Link href="/architecture" className="nav-link">
+            Architecture
+          </Link>
+          <Link href="/systems" className="nav-link">
+            Systems
+          </Link>
+          <Link href="/company" className="nav-link">
+            Vision
+          </Link>
+          <Link href="/design-in" className="nav-link">
+            Contact
+          </Link>
         </nav>
 
-        <Link href="/design-in" className="btn btn-primary header-cta">
-          Design-in
+        <Link href="/design-in" className="btn btn-cyan header-cta">
+          Request Access <span className="btn-arrow">&rsaquo;</span>
         </Link>
 
         <button
@@ -79,19 +59,25 @@ export function Header() {
           </svg>
         </button>
       </div>
+
       <nav id="mobile-nav" className={`nav-mobile${open ? " open" : ""}`} aria-label="Mobile">
-        {PRIMARY_NAV.flatMap((item) => [
-          <Link key={item.href} href={item.href} onClick={() => setOpen(false)}>
-            {item.label}
-          </Link>,
-          ...(item.children ?? []).map((child) => (
-            <Link key={child.href} href={child.href} onClick={() => setOpen(false)}>
-              {child.label}
-            </Link>
-          )),
-        ])}
+        <Link href="/products" onClick={() => setOpen(false)}>
+          Products
+        </Link>
+        <Link href="/architecture" onClick={() => setOpen(false)}>
+          Architecture
+        </Link>
+        <Link href="/systems" onClick={() => setOpen(false)}>
+          Systems
+        </Link>
+        <Link href="/company" onClick={() => setOpen(false)}>
+          Vision
+        </Link>
         <Link href="/design-in" onClick={() => setOpen(false)}>
-          Design-in
+          Contact
+        </Link>
+        <Link href="/design-in" className="btn btn-cyan" onClick={() => setOpen(false)} style={{ marginTop: "0.5rem" }}>
+          Request Access &rsaquo;
         </Link>
       </nav>
     </header>
