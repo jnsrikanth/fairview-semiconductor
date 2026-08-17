@@ -1,48 +1,48 @@
 export const STORY = {
-  heroTagline: "The New Frontier of Advanced Computing",
-  genesisTitle: "Carrying the Mantle of Silicon Valley's Genesis",
+  heroTagline: "Purpose-Built Silicon for Advanced AI",
+  genesisTitle: "Historical Lineage & Multi-Sector Roadmap",
   whyNow:
-    "We stand at a historic tipping point. The global transition into Next-Generation AI and advanced computing has triggered an insatiable, exponential demand for compute density and memory throughput. Traditional architectures have hit the Memory Wall—where GPUs spend most of their time waiting for data. FairView Semiconductor was formed to eliminate this bottleneck, unifying ultra-fast HBM4 memory and high-performance GPU compute onto a single, cohesive silicon architecture.",
+    "FairView Semiconductor unifies HBM4 memory architecture and GPU compute from individual silicon dies to full data center racks, eliminating memory bandwidth bottlenecks across frontier AI workloads.",
   fairchildParallel:
-    "In 1957, Fairchild Semiconductor transformed raw silicon into the planar transistor, igniting the genesis of Silicon Valley and modern computing. Today, at the dawn of the AI Century, FairView Semiconductor is formed in that exact same spirit: to become the genesis for the next 50 years of computing infrastructure—delivering unprecedented performance for data centers, enterprise blade systems, and autonomous frontiers.",
+    "Rooted in the pioneering spirit of Silicon Valley that began with Fairchild in 1957, FairView Semiconductor builds the next generation of unified hardware architecture for data centers, autonomous systems, and aerospace.",
   memoryWallSolution:
-    "Memory bandwidth is the scarce resource of our century. FairView's Gallium HBM4 chipset delivers over 8.192 TB/s of pure memory bandwidth directly to the GPU compute plane, unlocking 4x higher compute efficiency and eliminating data starvation in massive AI workloads.",
+    "Gallium HBM4 provides direct die-to-memory attach with 8.192+ TB/s of dedicated throughput, enabling continuous data feeding for large-scale training and inference.",
   bladeServerVision:
-    "In 2027, FairView delivers 1U, 2U, and 3U high-density enterprise blade servers powered by Stallion GPUs and Gallium HBM4 memory—delivering up to 131 TB/s of aggregate memory bandwidth with direct-to-chip liquid cooling and zero-copy CXL 3.1 fabric.",
+    "1U, 2U, and 3U server form factors delivering rack-scale compute density, direct-to-chip liquid cooling, and CXL 3.1 memory pooling for 2027 enterprise deployments.",
   origin:
-    "Engineered with global ambition and deep-tier semiconductor expertise, FairView operates where the world's most demanding compute clusters are designed, deployed, and scaled.",
+    "Engineered with deep semiconductor expertise, FairView partners with tier-1 OEMs, foundries, and system integrators globally.",
   valley:
-    "With roots expanding into Silicon Valley, FairView partners with tier-1 OEMs, foundries, and hyperscale cloud integrators worldwide.",
+    "With engineering operations in Silicon Valley and global partners, FairView delivers scalable silicon and rack systems worldwide.",
   vibeStatement:
-    "Driven by the cinematic momentum of retro-futuristic vision—from the relentless flux energy of Back to the Future to the high-energy electric pulse of classic Metro City cinema—FairView is fueled by an unmistakable tinge of ultraviolet purple vitality, representing pure power, virility, and the unstoppable drive toward the next computing epoch.",
+    "Combining hardware design rigor with high-performance silicon engineering to deliver reliable, high-bandwidth computing platforms.",
   export:
-    "FairView operates with strict adherence to international export controls, trade regulations, and silicon integrity standards.",
+    "FairView operates in full compliance with international semiconductor export controls, node classifications, and trade standards.",
 } as const;
 
 export const HISTORICAL_GENESIS = [
   {
     era: "1957 – 1970s",
-    name: "Epoch 1.0: The Fairchild Genesis",
+    name: "Epoch 1.0: Planar Silicon Foundations",
     description:
-      "Fairchild Semiconductor invents the planar manufacturing process, sparking the birth of Silicon Valley and modern microelectronics.",
+      "Fairchild Semiconductor pioneers the planar manufacturing process, establishing the silicon integrated circuit foundation of Silicon Valley.",
     tag: "Computing Epoch 1.0",
     color: "var(--fv-stallion)",
   },
   {
     era: "1980s – 2010s",
-    name: "Epoch 2.0: The PC & Internet Era",
+    name: "Epoch 2.0: Microprocessors & Distributed Cloud",
     description:
-      "Discrete microprocessors, graphics chips, and distributed cloud networking power the digital transformation of society.",
+      "Discrete CPUs, early graphics accelerators, and distributed networks power the global expansion of digital infrastructure.",
     tag: "Computing Epoch 2.0",
-    color: "var(--fv-gallium)",
+    color: "var(--fv-cyan)",
   },
   {
     era: "2026 – 2027+",
-    name: "Epoch 3.0: The FairView Genesis",
+    name: "Epoch 3.0: Unified Memory & Blade Systems",
     description:
-      "Breaking the AI Memory Wall with unified Gallium HBM4 (8.192+ TB/s) and Stallion GPUs across packages and 1U/2U/3U Blade Servers.",
+      "FairView integrates 8.192 TB/s Gallium HBM4 memory directly with Stallion GPU compute dies across 2.5D packages and enterprise blade servers.",
     tag: "Computing Epoch 3.0",
-    color: "var(--fv-vital)",
+    color: "var(--fv-cyan-bright)",
   },
 ] as const;
 
@@ -52,34 +52,34 @@ export const MARKETS = [
     title: "Hyperscale AI & Data Centers",
     badge: "First Silicon (2026)",
     highlight: "8.192+ TB/s HBM4 Bandwidth",
-    body: "CoWoS-class 2.5D packages combining Gallium HBM4 and Stallion GPUs to accelerate foundation LLM training and real-time inference.",
+    body: "CoWoS 2.5D packages combining Gallium HBM4 and Stallion GPUs to accelerate foundation LLM training and real-time inference.",
   },
   {
     slug: "enterprise-blade",
     title: "Enterprise Computing & Blade Servers",
     badge: "2027 Delivery Roadmap",
     highlight: "1U · 2U · 3U Rack Systems",
-    body: "High-density enterprise blade servers with direct-to-chip liquid cooling, up to 131 TB/s memory throughput, and CXL 3.1 memory pooling.",
+    body: "High-density enterprise blade servers with direct-to-chip liquid cooling, up to 131 TB/s memory throughput, and CXL 3.1 pooling.",
   },
   {
     slug: "auto",
-    title: "Automotive & Autonomous Self-Driving",
+    title: "Automotive & Autonomous Mobility",
     badge: "Level 4/5 Compute",
-    highlight: "Real-Time Sensor Fusion",
-    body: "Ultra-high bandwidth memory locks enabling low-latency 360-degree neural network processing for autonomous vehicle safety.",
+    highlight: "Low-Latency Sensor Fusion",
+    body: "Deterministic, high-bandwidth memory locks enabling real-time 360-degree neural network processing for autonomous vehicles.",
   },
   {
     slug: "space",
-    title: "Satellite & Deep Space Communications",
+    title: "Satellite & Aerospace Communications",
     badge: "Orbital Edge Compute",
     highlight: "Radiation-Tolerant High-BW",
-    body: "Space-hardened compute packages engineered for low Earth orbit satellite constellations, laser inter-satellite links, and deep space telemetry.",
+    body: "Space-hardened compute packages engineered for low Earth orbit satellite constellations and laser inter-satellite links.",
   },
   {
     slug: "mobile",
-    title: "Mobile & Creative Pro Workstations",
+    title: "High-End Creative & Pro Workstations",
     badge: "Next-Gen Workstations",
     highlight: "Compact Unified Memory",
-    body: "Scale-down organic substrate packages delivering high-bandwidth unified memory to next-generation creative workstations and edge systems.",
+    body: "High-bandwidth unified memory architectures delivering workstation-class performance to compact professional systems.",
   },
 ] as const;

@@ -1,159 +1,97 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { COMPANY, BLADE_SERVERS } from "@/content/specs";
 import { STORY } from "@/content/story";
 import { GenesisTimeline } from "@/components/GenesisTimeline";
 import { MarketGrid } from "@/components/MarketGrid";
 
 export const metadata: Metadata = {
-  title: "The Genesis & Vision | FairView Semiconductor",
+  title: "Vision & Lineage | FairView Semiconductor",
   description:
-    "The story of FairView Semiconductor: formed at the tipping point of the AI revolution, carrying the mantle of Fairchild Semiconductor to pioneer 21st-century compute across blade servers, automotive, space, and beyond.",
+    "Rooted in the pioneering spirit of Silicon Valley, FairView Semiconductor unifies HBM4 memory and GPU compute across packages and enterprise blade servers.",
 };
 
 export default function CompanyPage() {
   return (
     <>
-      <header className="wrap page-hero">
-        <p className="kicker" style={{ color: "var(--fv-vital-bright)" }}>
-          Company Genesis &amp; Vision
-        </p>
-        <h1>{STORY.genesisTitle}</h1>
-        <p className="lede">{STORY.whyNow}</p>
-        <div className="hero-actions" style={{ marginTop: "1.5rem" }}>
-          <a href="#fairchild-lineage" className="btn btn-vital">
-            The Fairchild Lineage
-          </a>
-          <Link href="/systems" className="btn btn-primary">
-            2027 Blade Server Systems
+      <header className="wrap page-hero" style={{ padding: "clamp(3rem, 6vw, 5rem) 0 2rem" }}>
+        <p className="section-kicker">Vision &amp; Lineage</p>
+        <h1 style={{ fontSize: "clamp(2.4rem, 5vw, 4rem)", marginBottom: "1rem" }}>{STORY.genesisTitle}</h1>
+        <p className="hero-desc" style={{ textAlign: "left", margin: 0, maxWidth: "48rem" }}>{STORY.whyNow}</p>
+        <div className="hero-actions" style={{ justifyContent: "flex-start", marginTop: "1.5rem" }}>
+          <Link href="/systems" className="btn btn-cyan">
+            Explore Blade Systems &rsaquo;
           </Link>
-          <Link href="/design-in" className="btn btn-ghost">
-            Design-In Engagement
+          <Link href="/design-in" className="btn btn-dark">
+            Request Early Access
           </Link>
         </div>
       </header>
 
       {/* Narrative Section */}
-      <section className="section" id="fairchild-lineage" style={{ paddingTop: 0 }}>
-        <div className="wrap two-col">
-          <div className="stack-lg">
+      <section className="section" style={{ paddingTop: 0 }}>
+        <div className="wrap two-col" style={{ display: "grid", gridTemplateColumns: "1fr", gap: "2.5rem" }}>
+          <div style={{ display: "grid", gap: "1.5rem", maxWidth: "48rem" }}>
             <div>
-              <p className="kicker" style={{ color: "var(--fv-vital-bright)" }}>The Historical Genesis</p>
-              <h2>The Fairchild Heritage for the AI Century</h2>
+              <h2 style={{ fontSize: "1.8rem", marginBottom: "0.6rem" }}>Semiconductor Heritage</h2>
               <p>{STORY.fairchildParallel}</p>
+            </div>
+
+            <div>
+              <h2 style={{ fontSize: "1.8rem", marginBottom: "0.6rem" }}>Multi-Sector Roadmap</h2>
               <p>
-                When Robert Noyce, Gordon Moore, and the legendary founders established Fairchild Semiconductor in 1957,
-                they recognized that vacuum tubes had reached an insurmountable physical ceiling. By inventing the planar
-                process, Fairchild catalyzed the modern semiconductor industry and birthed Silicon Valley.
-              </p>
-              <p>
-                Today, humanity stands at a comparable inflection point. Traditional computing architectures are throttled
-                by the memory wall: GPUs spend critical execution cycles waiting for memory buses, and data center clusters
-                drown in interconnect latency. FairView was formed to solve this foundational bottleneck—unifying high-bandwidth
-                HBM4 memory architecture and high-performance GPU compute dies into a single, cohesive silicon reality.
+                From hyperscale AI clusters to enterprise blade racks, autonomous mobility, and orbital communications,
+                FairView delivers scalable hardware architectures designed for high-throughput computing.
               </p>
             </div>
 
             <div>
-              <h2>21st-Century Multi-Segment Expansion</h2>
-              <p>
-                While hyperscale AI represents our first silicon tape-out, FairView is building the compute foundation for
-                the next fifty years of technology:
-              </p>
-              <ul style={{ paddingLeft: "1.2rem", display: "grid", gap: "0.5rem", color: "var(--fv-mist)" }}>
-                <li><strong>Enterprise Blade Servers:</strong> 1U, 2U, and 3U form factors delivering up to 131 TB/s of memory throughput in 2027.</li>
-                <li><strong>Autonomous Driving:</strong> Real-time 360-degree sensor fusion without memory starvation.</li>
-                <li><strong>Satellite &amp; Space Comms:</strong> Radiation-hardened, low-latency orbital edge computing.</li>
-                <li><strong>Pro Workstations:</strong> Compact high-bandwidth unified memory for next-generation creative systems.</li>
-              </ul>
+              <h2 style={{ fontSize: "1.8rem", marginBottom: "0.6rem" }}>Global Operations</h2>
+              <p>{STORY.origin} {STORY.valley}</p>
             </div>
 
             <div>
-              <h2>Global Reach &amp; Silicon Valley Presence</h2>
-              <p>{STORY.origin}</p>
-              <p>{STORY.valley}</p>
-            </div>
-
-            <div>
-              <h2>The Cinematic Spirit &amp; Purple Vitality</h2>
-              <p>{STORY.vibeStatement}</p>
-            </div>
-
-            <div>
-              <h2>Export Compliance &amp; Standards Integrity</h2>
+              <h2 style={{ fontSize: "1.8rem", marginBottom: "0.6rem" }}>Standards &amp; Export Compliance</h2>
               <p>{STORY.export}</p>
             </div>
           </div>
-
-          <aside className="stack">
-            <figure className="media-frame" style={{ aspectRatio: "16 / 9" }}>
-              <img src="/images/hero-package.webp" alt="FairView 2.5D CoWoS Package Architecture" />
-            </figure>
-            <p className="caption">FairView 2.5D CoWoS Package: Stallion GPU Die + Gallium HBM4 Memory Cubes.</p>
-
-            <article className="feature" style={{ borderLeft: "3px solid var(--fv-vital-bright)" }}>
-              <span className="badge-vital">Roadmap Focus</span>
-              <h3>2027 Blade Server Systems</h3>
-              <p>{BLADE_SERVERS.oneLiner}</p>
-              <Link className="btn btn-vital" href="/systems" style={{ marginTop: "0.6rem" }}>
-                View Blade Server Systems &rarr;
-              </Link>
-            </article>
-
-            <article className="feature">
-              <h3>Design-In Engineering</h3>
-              <p>Custom partner cube configuration, GPU topology, and 2027 enterprise rack allocations.</p>
-              <Link className="btn btn-primary" href="/design-in" style={{ marginTop: "0.6rem" }}>
-                Contact Systems Architecture
-              </Link>
-            </article>
-          </aside>
         </div>
       </section>
 
-      {/* Epochs of Computing Timeline */}
-      <section className="section">
+      {/* Epochs Timeline */}
+      <section className="section" style={{ paddingTop: 0 }}>
         <div className="wrap">
-          <div className="section-head">
-            <p className="kicker">Historical Lineage</p>
-            <h2>Three Epochs of Silicon Genesis</h2>
-            <p>From the birth of the planar transistor to the unified memory-compute architecture of the AI Century.</p>
+          <div className="section-center-head" style={{ textAlign: "left", margin: "0 0 2rem 0" }}>
+            <p className="section-kicker">Three Epochs</p>
+            <h2>The Evolution of Compute Architecture.</h2>
           </div>
           <GenesisTimeline />
         </div>
       </section>
 
       {/* Markets Section */}
-      <section className="section" id="markets">
+      <section className="section" style={{ paddingTop: 0 }}>
         <div className="wrap">
-          <div className="section-head">
-            <p className="kicker">21st-Century Frontiers</p>
-            <h2>Five Strategic Compute Pillars</h2>
-            <p>First silicon is hyperscale AI. The company is engineered for every industry that will inherit this architecture.</p>
+          <div className="section-center-head" style={{ textAlign: "left", margin: "0 0 2rem 0" }}>
+            <p className="section-kicker">Target Markets</p>
+            <h2>Key Deployment Verticals.</h2>
           </div>
           <MarketGrid />
         </div>
       </section>
 
-      {/* Bottom CTA */}
-      <section className="section">
-        <div className="wrap stack">
-          <div className="section-head">
-            <p className="kicker">Engage with FairView</p>
-            <h2>Build on the Next Genesis of Computing.</h2>
-            <p>
-              Connect with our silicon and systems engineering teams for 2027 blade server deployments and custom package design-in.
-            </p>
-          </div>
-          <div className="hero-actions">
-            <Link className="btn btn-primary" href="/design-in">
-              Initiate Design-In Protocol
+      {/* CTA */}
+      <section className="cta-section">
+        <div className="wrap cta-box">
+          <h2>Request Early Access &amp; Technical Documentation.</h2>
+          <p>
+            Connect with our engineering team for design-in specifications and 2027 hardware availability.
+          </p>
+          <div className="hero-actions" style={{ marginTop: "0.8rem" }}>
+            <Link className="btn btn-cyan" href="/design-in">
+              Request Early Access &rsaquo;
             </Link>
-            <Link className="btn btn-vital" href="/systems">
-              Explore 1U/2U/3U Blade Servers
-            </Link>
-            <Link className="btn btn-ghost" href="/specifications">
-              Public Specifications
+            <Link className="btn btn-dark" href="/specifications">
+              Inspect Engineering Datasheets
             </Link>
           </div>
         </div>

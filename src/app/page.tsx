@@ -9,23 +9,22 @@ export default function HomePage() {
       <section className="hero-viewport">
         <div className="wrap hero-content">
           <div className="hero-badge">
-            <span>&bull;</span> SILICON GENESIS &mdash; EPOCH 3.0
+            <span>&bull;</span> SILICON &amp; SYSTEMS PLATFORM
           </div>
           <h1 className="hero-title">
-            The Genesis of<br />
-            <span className="gradient-text-cyan">21st-Century</span><br />
-            Computing.
+            Purpose-Built Silicon for<br />
+            <span className="gradient-text-cyan">Advanced AI.</span>
           </h1>
           <p className="hero-desc">
-            FairView Semiconductor is redefining the frontier of compute and memory &mdash; unifying Gallium HBM4
-            and Stallion GPU architectures into a single silicon package that shatters the AI memory wall.
+            FairView Semiconductor unifies HBM4 memory architecture and GPU compute from individual silicon dies
+            to full data center racks.
           </p>
           <div className="hero-actions">
             <Link className="btn btn-cyan" href="/products">
               Explore Products <span className="btn-arrow">&rarr;</span>
             </Link>
             <Link className="btn btn-dark" href="/design-in">
-              Request Design-In Access
+              Request Early Access
             </Link>
           </div>
           <div className="hero-scroll-cue">
@@ -43,7 +42,7 @@ export default function HomePage() {
               <div className="stat-num">
                 8.192<span className="stat-unit">TB/s</span>
               </div>
-              <div className="stat-title">HBM4 Memory Bandwidth</div>
+              <div className="stat-title">Peak HBM4 Bandwidth</div>
             </div>
             <div className="stat-block">
               <div className="stat-num">
@@ -55,11 +54,11 @@ export default function HomePage() {
               <div className="stat-num">
                 131<span className="stat-unit">TB/s</span>
               </div>
-              <div className="stat-title">3U Rack-Scale Throughput</div>
+              <div className="stat-title">3U Rack Throughput</div>
             </div>
             <div className="stat-block">
               <div className="stat-num">2027</div>
-              <div className="stat-title">Blade Systems Delivery</div>
+              <div className="stat-title">FV-RACK Series Delivery</div>
             </div>
           </div>
         </div>
@@ -77,10 +76,10 @@ export default function HomePage() {
           <div className="product-row">
             <div className="product-copy">
               <span className="product-pill-badge">Memory Chipset</span>
-              <h3 className="product-heading">Break the AI Memory Wall.</h3>
+              <h3 className="product-heading">Gallium HBM4 Architecture</h3>
               <p className="product-description">
-                The Gallium HBM4 chipset delivers over 8.192 TB/s of pure memory bandwidth directly to the GPU compute
-                plane &mdash; eliminating data starvation in every AI workload at scale.
+                Direct die-to-memory attach providing 8.192 TB/s throughput for data-intensive AI models and high-efficiency
+                training clusters.
               </p>
               <div className="spec-tiles-grid">
                 <div className="spec-tile">
@@ -105,7 +104,7 @@ export default function HomePage() {
               </Link>
             </div>
             <div className="product-media-card">
-              <img src="/images/gallium-cube-3d.jpg" alt="Gallium HBM4 3D Memory Cube" />
+              <img src="/images/gallium-cube-3d.jpg" alt="Gallium HBM4 Memory Architecture" />
               <div className="media-card-caption">
                 <strong>Gallium Series</strong>
                 <span>Memory Architecture</span>
@@ -117,10 +116,10 @@ export default function HomePage() {
           <div className="product-row reverse">
             <div className="product-copy">
               <span className="product-pill-badge crimson">GPU Accelerator</span>
-              <h3 className="product-heading">Massive AI Compute Density.</h3>
+              <h3 className="product-heading">Stallion AI Accelerator</h3>
               <p className="product-description">
-                On-package Stallion compute die with 128 streaming multiprocessors and high-efficiency tensor arrays,
-                directly attached to the Gallium HBM4 memory bus for maximum throughput.
+                2nm GAAFET compute die optimized for tensor execution and high-bandwidth memory access across dense AI
+                infrastructure.
               </p>
               <div className="spec-tiles-grid">
                 <div className="spec-tile">
@@ -145,7 +144,7 @@ export default function HomePage() {
               </Link>
             </div>
             <div className="product-media-card">
-              <img src="/images/stallion-gpu-3d.jpg" alt="Stallion AI GPU Die" />
+              <img src="/images/stallion-gpu-3d.jpg" alt="Stallion GPU Compute Die" />
               <div className="media-card-caption">
                 <strong>Stallion Series</strong>
                 <span>GPU Compute Die</span>
@@ -308,10 +307,10 @@ export default function HomePage() {
         <div className="wrap">
           <div className="section-center-head">
             <p className="section-kicker">The Lineage &amp; Vision</p>
-            <h2>Three Epochs of Silicon Genesis.</h2>
+            <h2>Historical Lineage &amp; Multi-Sector Roadmap.</h2>
             <p style={{ marginTop: "0.5rem" }}>
-              In 1957, Fairchild Semiconductor created the planar transistor that birthed Silicon Valley. Today, FairView
-              Semiconductor breaks the memory wall to ignite the AI Century.
+              Rooted in the pioneering spirit of Silicon Valley, expanding advanced hardware into AI data centers,
+              autonomous vehicles, and orbital systems.
             </p>
           </div>
           <div className="timeline-grid">
@@ -330,10 +329,9 @@ export default function HomePage() {
       <section className="cta-section" id="contact">
         <div className="wrap cta-box">
           <p className="section-kicker">Get Started</p>
-          <h2>Build on the Next Genesis of Computing.</h2>
+          <h2>Request Early Access &amp; Technical Documentation.</h2>
           <p>
-            Connect with our systems architecture and engineering teams for 2027 enterprise blade server allocations
-            and custom silicon design-in.
+            Connect with our engineering team for design-in specifications and 2027 hardware availability.
           </p>
           <div className="hero-actions" style={{ marginTop: "0.8rem" }}>
             <Link className="btn btn-cyan" href="/design-in">
